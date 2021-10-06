@@ -1,0 +1,149 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+img {
+    vertical-align: top;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+.planWrap {
+    width: 1024px;
+    margin: 0 auto 20px;
+}
+
+.planTitle {
+    padding: 50px;
+    margin-bottom: 5px;
+    text-align: center;
+    font-size: 2.4rem;
+    letter-spacing: 0.1em;
+}
+
+.scheduleWrap {
+    width: 90%;
+    margin: 0 auto;
+    background: url("../img/plan_bg.png") no-repeat scroll center;
+    background-size: contain;
+
+}
+
+.scheduleItem {
+    position: relative;
+    width: 80%;
+    margin: 0 30px;
+    padding: 20px 0;
+    font-size: 0;
+}
+
+
+.time {
+    margin-bottom: -10px;
+    font-size: 2.2rem;
+}
+
+.time:before {
+    content: '';/*何も入れない*/
+    display: inline-block;/*忘れずに！*/
+    width: 30px;
+    height: 30px;
+    margin-right: 8px;
+    background-size: contain;
+    vertical-align: middle;
+}
+
+.item1 .time:before {
+    background-image: url("../img/time1.png");
+}
+
+.item2 .time:before {
+    background-image: url("../img/time2.png");
+}
+
+.item3 .time:before {
+    background-image: url("../img/time3.png");
+}
+
+.placeName {
+    font-size: 2.0rem;
+    font-weight: bold;
+}
+
+.photo {
+    display: inline-block;
+    width: 55%;
+    vertical-align: middle;
+    font-size: 1.6rem;
+}
+
+.photo img {
+    width: 100%;
+}
+
+.article {
+    display: inline-block;
+    width: 45%;
+    padding: 0 20px;
+    vertical-align: middle;
+    font-size: 1.6rem;
+    line-height: 2;
+    line-break: normal;
+}
+
+.scheduleWrap>:nth-child(odd) {
+    float: left;
+}
+
+.scheduleWrap>:nth-child(even) {
+    float: right;
+}
+
+.scheduleWrap>:nth-child(even) .time {
+    text-align: right;
+}
+
+.scheduleWrap>:nth-child(even) .placeName {
+    text-align: right;
+}
+
+.scheduleWrap>:nth-child(even) .replace {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+}
+
+.scheduleWrap>:nth-child(even) .replace .photo {
+    order: 1;
+}
+
+.scheduleWrap>:nth-child(even) .replace .article {
+    order: 2;
+}
+
+/*　位置の微調整　*/
+.item1 .placeName {
+    margin-bottom: 5px;
+}
+
+.item2 .placeName {
+    margin-bottom: -10px;
+}
+
+.item3 .placeName {
+    margin-bottom: 0px;
+}
+
+.couple-item2 {
+  margin-top: -80px;
+}
+
+.couple-item3 {
+  margin-bottom: 80px;
+}
